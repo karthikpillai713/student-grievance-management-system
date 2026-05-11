@@ -1,0 +1,32 @@
+﻿@model WebApplicationFinal.Models.Grievance
+
+<h2>Submit Grievance</h2>
+
+<form method="post">
+
+    <div>
+        <label>Title</label>
+        <input type="text" name="Title" required />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Description</label>
+        <textarea name="Description"></textarea>
+    </div>
+
+    <br />
+
+    <div>
+        <label>Category</label>
+
+        <select name="CategoryId" asp-items="ViewBag.Categories">
+        </select>
+    </div>
+
+    <br />
+
+    <button type="submit">Submit</button>
+
+</form>

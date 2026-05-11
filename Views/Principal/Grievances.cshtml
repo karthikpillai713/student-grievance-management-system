@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebApplicationFinal.Models.Grievance>
+
+<h2>Principal - Grievances</h2>
+
+<table class="table table-bordered table-striped">
+
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.Title</td>
+
+            <td>@item.Description</td>
+
+            <td>@item.Status</td>
+
+            <td>
+
+                <a href="/Principal/Resolve/@item.GrievanceId">
+                    Resolve
+                </a>
+
+                |
+
+                <a href="/Principal/Reject/@item.GrievanceId">
+                    Reject
+                </a>
+
+                |
+
+                <a href="/Principal/Review/@item.GrievanceId">
+                    Under Review
+                </a>
+
+            </td>
+
+        </tr>
+    }
+
+</table>

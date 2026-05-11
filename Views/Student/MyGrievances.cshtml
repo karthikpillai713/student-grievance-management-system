@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WebApplicationFinal.Models.Grievance>
+
+<h2>My Grievances</h2>
+
+<table class="table table-bordered table-striped">
+
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Date</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.Status</td>
+            <td>@item.CreatedAt</td>
+        </tr>
+    }
+
+</table>

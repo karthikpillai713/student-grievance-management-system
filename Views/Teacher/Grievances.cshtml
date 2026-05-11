@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebApplicationFinal.Models.Grievance>
+
+<h2>Teacher - Grievances</h2>
+
+<table class="table table-bordered table-striped">
+
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.Title</td>
+
+            <td>@item.Description</td>
+
+            <td>@item.Status</td>
+
+            <td>
+
+                <a class="btn btn-success btn-sm"
+                   href="/Teacher/Solve/@item.GrievanceId">
+                </a>
+
+                |
+
+                <a href="/Teacher/Forward/@item.GrievanceId">
+                    Forward
+                </a>
+
+            </td>
+
+        </tr>
+    }
+
+</table>
